@@ -1,0 +1,28 @@
+.buttonToAnotherPage {
+  text-align: center;
+
+  &__button {
+    background-color: $accentBlue;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    text-decoration: none;
+
+    &--grey {
+      background-color: transparent;
+      border: 1px solid #9b9b9b;
+      color: #9b9b9b;
+      margin-top: 40px;
+
+      @include mq-mobile {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+$breakpoint-tablet: 959px;
+
+@mixin mq-tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+$breakpoint-mobile: 559px;
+
+@mixin mq-mobile {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}

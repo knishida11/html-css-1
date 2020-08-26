@@ -1,0 +1,145 @@
+.service {
+  padding-bottom: 145px;
+  padding-top: 60px;
+
+  @include mq-mobile {
+    padding-bottom: 80px;
+  }
+
+  &__heading {
+    color: #616161;
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+
+    @include mq-mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__accentBlue {
+    color: $accentBlue;
+  }
+
+  &__headingSpan {
+    color: $accentBlue;
+  }
+
+  &__description {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 75%;
+
+    @include mq-tablet {
+      width: 100%;
+    }
+  }
+
+  &__border {
+    border-top: 1px solid $borderGrey;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+    width: 80%;
+
+    @media screen and (max-width: 659px) {
+      width: 100%;
+    }
+
+    @include mq-mobile {
+      display: none;
+    }
+  }
+
+  &__dot {
+    font-size: 12px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -45px;
+
+    &--blue {
+      color: $accentBlue;
+    }
+
+    @include mq-mobile {
+      display: none;
+    }
+  }
+
+  &__icons {
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 35px;
+    position: relative;
+    width: 80%;
+
+    @media screen and (max-width: 659px) {
+      width: 100%;
+    }
+
+    @include mq-mobile {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__iconBox {
+    position: absolute;
+    text-align: center;
+    top: 0;
+
+    &:nth-of-type(1) {
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      left: 28.5%;
+    }
+
+    &:nth-of-type(3) {
+      right: 28.5%;
+    }
+
+    &:nth-of-type(4) {
+      right: 0;
+    }
+
+    @include mq-tablet {
+      &:nth-of-type(2) {
+        left: 27%;
+      }
+
+      &:nth-of-type(3) {
+        right: 27%;
+      }
+    }
+
+    @include mq-mobile {
+      flex-basis: 40%;
+      position: static;
+
+      &:nth-of-type(n + 3) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__image {
+    height: 50px;
+  }
+
+  &__subHeading {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+
+    &--active {
+      color: $accentBlue;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.borderBottomWithDecoration {
+  display: inline-block;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative;
+
+  &:before,
+  &:after {
+    background-color: $borderGrey;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: absolute;
+    top: 65%;
+    width: 50px;
+  }
+
+  &--darkBorder {
+    &:before,
+    &:after {
+      background-color: #636363;
+    }
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &__logo {
+    height: 16px;
+    vertical-align: bottom;
+    width: 16px;
+  }
+}

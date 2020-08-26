@@ -1,0 +1,168 @@
+.header {
+  background-color: $headerBackgroundColor;
+
+  &__flex {
+    align-items: center;
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    @include mq-tablet {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  &__left {
+    flex-basis: 50%;
+  }
+
+  &__logoBox {
+    display: inline-block;
+    width: 138px;
+  }
+
+  &__right {
+    flex-basis: 50%;
+  }
+
+  &__ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq-tablet {
+      display: none;
+    }
+  }
+
+  &__li {
+    list-style-type: none;
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  &__mobileButtonBox {
+    display: none;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+
+    @include mq-tablet {
+      display: block;
+    }
+  }
+
+  .menu-trigger,
+  .menu-trigger span {
+    box-sizing: border-box;
+    display: inline-block;
+    transition: all 0.4s;
+  }
+
+  .menu-trigger {
+    bottom: 0;
+    height: 25px;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .menu-trigger span {
+    background-color: $mobile-menu-span;
+    border-radius: 4px;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $mobile-menu-span;
+    }
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .menu-trigger span:nth-of-type(2) {
+    top: 10px;
+  }
+
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .menu-trigger span:nth-of-type(2)::after {
+    background-color: $mobile-menu-span;
+    border-radius: 4px;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $mobile-menu-span;
+    }
+  }
+
+  .menu-trigger.active span:nth-of-type(1) {
+    transform: translateY(20px) scale(0);
+  }
+
+  .menu-trigger.active span:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+
+  .menu-trigger.active span:nth-of-type(2)::after {
+    transform: rotate(90deg);
+  }
+
+  .menu-trigger.active span:nth-of-type(3) {
+    transform: translateY(-20px) scale(0);
+  }
+
+  &__mobileMenu {
+    display: none;
+    height: 0;
+
+    @include mq-tablet {
+      display: block;
+    }
+  }
+
+  &__mobileLink {
+    border-top: #6f6f6f solid 1px;
+    color: #fff;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

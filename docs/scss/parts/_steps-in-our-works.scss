@@ -1,0 +1,129 @@
+.stepsInOurWorks {
+  background-color: $darkWhiteBg;
+  border-top: 1px solid $borderGrey;
+  padding-bottom: $top-section-padding-bottom;
+
+  &__inner {
+    display: flex;
+    margin: 0 auto;
+    width: 560px;
+
+    @include mq-mobile {
+      width: 100%;
+    }
+  }
+
+  &__column {
+    flex-basis: 50%;
+    margin-top: 40px;
+    position: relative;
+
+    &:nth-child(1) {
+      padding-top: 200px;
+    }
+
+    &:nth-child(2) {
+      &:before {
+        background: $borderGrey;
+        content: "";
+        display: inline-block;
+        height: 600px;
+        position: absolute;
+        top: 25px;
+        width: 1px;
+
+        @include mq-mobile {
+          height: 640px;
+        }
+
+        @media screen and (max-width: 320px) {
+          height: 680px;
+        }
+      }
+    }
+  }
+
+  &__box {
+    padding-left: 55px;
+    position: relative;
+
+    @include mq-mobile {
+      padding-left: 20px;
+    }
+
+    &--paddingRight {
+      padding-left: 0;
+      padding-right: 55px;
+
+      @include mq-mobile {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__iconBox {
+    padding-left: 25px;
+
+    &--paddingRight {
+      padding-left: 0;
+      padding-right: 25px;
+      text-align: right;
+    }
+
+    &--3rdOrLater {
+      margin-top: 200px;
+    }
+  }
+
+  &__circle {
+    border: 2px solid $accentBlue;
+    border-radius: 50%;
+    display: inline-block;
+    height: 60px;
+    position: relative;
+    width: 60px;
+  }
+
+  &__image {
+    bottom: 0;
+    height: 32px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+  }
+
+  &__dot {
+    left: -4px;
+    position: absolute;
+    top: 13px;
+
+    &--right {
+      left: initial;
+      right: -6px;
+      z-index: 100;
+    }
+  }
+
+  &__title {
+    color: $accentBlue;
+    font-size: 14px;
+    font-weight: 800;
+
+    &--textAlignRight {
+      text-align: right;
+    }
+  }
+
+  &__text {
+    color: #7f7f7f;
+    font-size: 14px;
+    margin-top: 10px;
+
+    &--textAlignRight {
+      text-align: right;
+    }
+  }
+}

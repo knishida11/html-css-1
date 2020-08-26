@@ -1,0 +1,35 @@
+html,
+body {
+  background: #fff;
+  color: #7f7f7f;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: #7f7f7f;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.content-wrap {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}

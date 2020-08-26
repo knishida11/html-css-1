@@ -1,0 +1,31 @@
+.ourRecentProjects {
+  background-color: #2c2c2c;
+  padding-bottom: $top-section-padding-bottom;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &__item {
+    display: block;
+    flex-basis: 31.5%;
+
+    @include mq-mobile {
+      flex-basis: 100%;
+
+      &:nth-of-type(n + 2) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__button {
+    border: 1px solid #9b9b9b;
+    color: #9b9b9b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
